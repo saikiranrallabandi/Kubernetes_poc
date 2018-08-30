@@ -1,0 +1,129 @@
+<html>
+<head>
+<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+</head>
+   <body id="register" class="bg_image background_image" style="">
+   <style>
+   li {
+    color: red;
+}
+</style>
+      <noscript>&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFSTS5N" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+      <script>!function(e){"use strict";var t=function(t,n,r){function o(e){if(i.body)return e();setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r,r.getAttribute("media")),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){t.poly(),e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);</script>
+      <script>!function(e){"use strict";var t=function(t,n,r){function o(e){if(i.body)return e();setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r,r.getAttribute("media")),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){t.poly(),e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);</script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/loglevel/1.6.0/loglevel.min.js"></script>
+      <script>log.enableAll();</script>
+      <script type="text/javascript" id="hs-script-loader" src="//js.hs-scripts.com/3848622.js"></script><script type="text/javascript" id="gtm-scroll-tracking">(function(c){function d(a){if(!(this instanceof d))return new d(a);a=a||{};var b=a.context||"body";"string"===typeof b&&(b=h.querySelector(b));if(!b)throw Error("Unable to find context "+b);this._context=b;this.minHeight=a.minHeight||0;this._marks={};this._tracked={};this._config={percentages:{each:{},every:{}},pixels:{each:{},every:{}},elements:{each:{},every:{}}};a=n(this._checkDepth.bind(this),500);b=this._update.bind(this);var g=n(b,500);c.addEventListener("scroll",a,!0);c.addEventListener("resize",
+         g);this._artifacts={timer:q(b),resize:g,scroll:a}}function r(a){return a.handlers.map(function(b){return b.bind(this,{data:{depth:a.depth,label:a.label}})})}function p(a){var b=Math.floor(a.numerator/a.n),g;for(g=1;g<=b;g++)a.callback(g*a.n)}function q(a){var b=m();return setInterval(function(){m()!==b&&(a(),b=m())},500)}function m(){var a=h.body,b=h.documentElement;return Math.max(a.scrollHeight,a.offsetHeight,b.clientHeight,b.scrollHeight,b.offsetHeight)}function t(a){a=a.getBoundingClientRect().top;
+         var b=void 0!==c.pageYOffset?c.pageYOffset:(h.documentElement||h.body.parentNode||h.body).scrollTop;return a+b}function u(){}function n(a,b){var g,e,d,l=null,c=0,f=function(){c=new Date;l=null;d=a.apply(g,e)};return function(){var k=new Date;c||(c=k);var h=b-(k-c);g=this;e=arguments;0>=h?(clearTimeout(l),l=null,c=k,d=a.apply(g,e)):l||(l=setTimeout(f,h));return d}}function v(){var a={},b;for(b in d)a[b]=u;c.ScrollTracker=a}if(c.navigator.userAgent.match(/MSIE [678]/gi))return v();var h=c.document;
+         d.prototype.destroy=function(){clearInterval(this._artifacts._timer);c.removeEventListener("resize",this._artifacts.resize);c.removeEventListener("scroll",this._artifacts.scroll,!0)};d.prototype.on=function(a,b){var g=this._config;["percentages","pixels","elements"].forEach(function(e){a[e]&&["each","every"].forEach(function(c){a[e][c]&&a[e][c].forEach(function(a){g[e][c][a]=g[e][c][a]||[];g[e][c][a].push(b)})})});this._update()};d.prototype._update=function(){this._calculateMarks();this._checkDepth()};
+         d.prototype._calculateMarks=function(){function a(a,b){return function(b,c){var g=b.getBoundingClientRect().top-h._context.getBoundingClientRect().top;d({label:a+"["+c+"]",depth:g,handlers:e.elements.every[a]})}}function b(a){return function(a){var b=Math.floor(a*c/100);d({label:String(a)+"%",depth:b,handlers:e.percentages.every[f]})}}function g(a){return function(b){d({label:String(b)+"px",depth:b,handlers:a})}}delete this._marks;this._fromTop=t(this._context);this._marks={};var e=this._config,c=
+         this._contextHeight(),d=this._addMark.bind(this),h=this,f;if(!(c<this.minHeight)){for(f in e.percentages.every)p({n:Number(f),numerator:100,callback:b(e.percentages.every[f])});for(f in e.pixels.every)p({n:Number(f),numerator:c,callback:g(e.pixels.every[f])});for(f in e.percentages.each){var k=Math.floor(c*Number(f)/100);d({label:f+"%",depth:k,handlers:e.percentages.each[f]})}for(f in e.pixels.each)k=Number(f),d({label:f+"px",depth:k,handlers:e.pixels.each[f]});for(f in e.elements.every)k=[].slice.call(this._context.querySelectorAll(f)),
+         k.length&&k.forEach(a(f,e.elements.every[f]));for(f in e.elements.each)if(k=this._context.querySelector(f))k=k.getBoundingClientRect().top-h._context.getBoundingClientRect().top,d({label:f,depth:k,handlers:e.elements.each[f]})}};d.prototype._checkDepth=function(){var a=this._marks,b=this._currentDepth(),c;for(c in a)b>=c&&!this._tracked[c]&&(a[c].forEach(function(a){a()}),this._tracked[c]=!0)};d.prototype.reset=function(){this._tracked={}};d.prototype._contextHeight=function(){return this._context!==
+         h.body?this._context.scrollHeight-5:this._context.clientHeight-5};d.prototype._currentDepth=function(){var a=this._context;var b=a.offsetHeight;var d="CSS1Compat"===h.compatMode?h.documentElement:h.body;d=d.clientHeight;a=a.getBoundingClientRect();b=Math.max(0,0<a.top?Math.min(b,d-a.top):a.bottom<d?a.bottom:d);this._context.scrollTop?a=this._context.scrollTop+b:(this._context.scrollTop=1,this._context.scrollTop?(this._context.scrollTop=0,a=this._context.scrollTop+b):a=c.pageYOffset||h.documentElement.scrollTop||
+         h.body.scrollTop||0);return b?a+b:a>=this._fromTop?a:-1};d.prototype._addMark=function(a){var b=a.depth;this._marks[b]=(this._marks[b]||[]).concat(r(a))};c.ScrollTracker=d})(this);(function(c){function d(){var d=c.ScrollTracker();d.on({percentages:{each:[10,90],every:[25]}},function(c){dataLayer.push({event:"scrollTracking",attributes:{distance:c.data.depth,label:c.data.label}})});delete c.ScrollTracker}"loading"!==document.readyState?d():document.addEventListener("DOMContentLoaded",d)})(window);
+      </script>
+      <div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.5921625392458243"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.4468121254115558" width="0" height="0" alt="" src="https://bat.bing.com/action/0?ti=5858939&amp;Ver=2&amp;mid=0fd870c0-e079-0cbc-d519-b13933245eb4&amp;evt=pageLoad&amp;sid=4b9a38cf-0&amp;pi=-1978200868&amp;lg=en-US&amp;sw=1440&amp;sh=900&amp;sc=24&amp;tl=ScaleGrid | Register&amp;r=https%3A%2F%2Fsigmaxmgrid.io%2F&amp;p=https%3A%2F%2Fconsole.sigmaxmgrid.io%2Fusers%2Fregister&amp;msclkid=N&amp;rn=859883"></div>
+      <style type="text/css">
+         @charset "UTF-8";img{border:0}body{margin:0}body{-moz-osx-font-smoothing:graysigmaxm}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}footer{display:block}a{background:0 0}.btn,img{vertical-align:middle}svg:not(:root){overflow:hidden}button,input{color:inherit;font:inherit;margin:0}button{overflow:visible}button{text-transform:none}button,input[type=submit]{-webkit-appearance:button}input[type=submit]:disabled{opacity:0.5!important;}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input[type=checkbox]{box-sizing:border-box;padding:0}.btn{background-image:none}*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:62.5%}body{line-height:1.42857143}button,input{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#428bca;text-decoration:none}label{font-weight:700}.text-center{text-align:center}ul{margin-top:0}ul{margin-bottom:10px}@media (min-width:768px){.container{width:750px}}.container{margin-right:auto;margin-left:auto}.container{padding-left:15px;padding-right:15px}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.row{margin-left:-15px;margin-right:-15px}.col-sm-6{position:relative;min-height:1px;padding-left:15px;padding-right:15px}@media (min-width:768px){.col-sm-6{float:left}.col-sm-6{width:50%}}label{display:inline-block}.checkbox{display:block}input[type=checkbox]{margin:4px 0 0;line-height:normal}.form-control{font-size:14px;line-height:1.42857143}.form-control{-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.form-control::-moz-placeholder{color:#999;opacity:1}.form-control:-ms-input-placeholder{color:#999}.form-control::-webkit-input-placeholder{color:#999}.form-group{margin-bottom:15px}.checkbox{min-height:20px;margin-top:10px;margin-bottom:10px;padding-left:20px}.checkbox label{display:inline;font-weight:400}.checkbox input[type=checkbox]{float:left;margin-left:-20px}.btn-block,input[type=submit].btn-block{width:100%}.btn{display:inline-block;margin-bottom:0;font-weight:400;text-align:center;border:1px solid transparent;white-space:nowrap;padding:6px 12px;font-size:14px;line-height:1.42857143}.btn-block{display:block;padding-left:0;padding-right:0}.alert{padding:15px;border:1px solid transparent}.alert-danger{background-color:#f2dede;border-color:#ebccd1;color:#a94442}.container:after,.container:before,.row:after,.row:before{content:" ";display:table}.container:after,.row:after{clear:both}.hide{display:none}@-ms-viewport{width:device-width}body{font-family:"open sans",sans-serif;font-size:14px;color:#758e9f}body,html{height:100%!important}.text-muted{color:#758e9f;font-weight:100!important}.form-control{background-color:#fff;background-image:none;border:1px solid #e5e6e7;border-radius:1px;color:inherit;display:block;padding:6px 12px;width:100%}.btn{border-radius:3px}.btn-primary{color:#fff}.form-control{box-shadow:none}p{padding:10px 0;margin:0}label{color:#34495e!important}.form-control{height:40px!important}.alert{margin-bottom:12px!important}.alert-info{background-color:#e3f0f5!important;border-color:#bce8f9!important;color:#26a7da!important;font-weight:500!important}label{margin-bottom:5px!important}input[type=checkbox]{visibility:visible}iframe{border:transparent}body{background-color:none!important;-webkit-font-smoothing:antialiased}::-ms-reveal{display:none}.btn-primary{background-color:#1488c6;border-color:#289558}.alert{border-radius:2px}.btn{outline:0!important}::-webkit-input-placeholder{color:#d0d0d0!important;opacity:1!important}:-moz-placeholder{color:#d0d0d0!important;opacity:1!important}::-moz-placeholder{color:#d0d0d0!important;opacity:1!important}:-ms-input-placeholder{color:#d0d0d0!important}body.background_image{background-color:grey!important;background:url(/public/images/auth/auth-bg.png) center center no-repeat fixed;background-size:cover;font-family:Poppins,sans-serif;font-size:14px;line-height:1.42857;color:#333}body.background_image .text-muted{color:#7f93a5;font-weight:400!important}#register_area #register_box{width:580px;position:fixed;top:45%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}#register_area #register_box #brand_area{margin-bottom:2%}#register_area #register_box #brand_area .brand-header{margin-bottom:.5%}#register_area #register_box #register_form_box{background:#fff;box-shadow:1px 1px 5px rgba(255,255,255,.5) inset;padding-top:1.5%;padding-bottom:1%;border-radius:4px;position:relative}#register_area #register_box #register_form_box #password_checklist{list-style-type:none;padding:1.5em;padding-top:.8em;padding-bottom:.3em;font-size:12px}#register_area #register_box #register_form_box #password_checklist li{margin-bottom:.7em;padding-left:1.8em;width:17em;display:inline-block;color:gray}#register_area #register_box #register_form_box #password_checklist li.password-condition-text{font-weight:700;font-size:14px;padding-left:0;color:#34495e}#register_area #register_box #register_form_box .alert{margin-top:1.5%}#register_area #register_box #register_form_box .form-group{margin-left:4%;margin-right:4%}#register_area #register_box #register_form_box .form-group label{font-weight:600}#register_area #register_box #register_form_box .form-group input[type=email],#register_area #register_box #register_form_box .form-group input[type=password]{margin-top:1%;margin-bottom:.7%;border-radius:2px;border-radius:4px;background-color:#fafafa;height:3.5em!important}#register_area #register_box #register_form_box .form-group .form-icon{color:#1488c6;margin-right:.3em;margin-left:.7em}#register_area #register_box #register_form_box .img-loader{width:2em;position:absolute;right:5%;top:2.5%}#register_area #register_box #register_form_box input[type=checkbox]#terms{margin:0;width:1.4em;height:1.5em;margin-right:.7em}#register_area #register_box #register_form_box .checkbox-group{position:relative}#register_area #register_box #register_form_box .checkbox-group .checkbox{padding-left:0;margin:1% 0;margin-bottom:4%;height:25px}#register_area #register_box #register_form_box .checkbox-group .checkbox label{font-weight:400}#register_area #register_box #register_form_box .checkbox-group .checkbox a{text-decoration:underline;color:#272727;font-weight:600}#register_area #register_box #register_form_box #errors{line-height:1.5em}#register_area #register_box #register_form_box #btn_submit{height:50px;font-weight:700;font-size:16px}#register_area .copyright{position:fixed;color:#fff;bottom:1%;right:46%}
+      </style>
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+         })(window,document,'script','dataLayer','GTM-NFSTS5N');
+      </script>
+      <!-- Google Code for Scalegrid Conversion Page
+         For now kept in the chat section so that it is only enabled for production deployment
+         In your html page, add the snippet and call
+         goog_report_conversion when someone clicks on the
+         chosen link or button. -->
+      <script type="text/javascript">
+         /* <![CDATA[ */
+         goog_snippet_vars = function() {
+             var w = window;
+             w.google_conversion_id = 1001146956;
+             w.google_conversion_label = "TMUmCKLM720QzJSx3QM";
+             w.google_remarketing_only = false;
+         }
+         // DO NOT CHANGE THE CODE BELOW.
+         goog_report_conversion = function(url) {
+             goog_snippet_vars();
+             window.google_conversion_format = "3";
+             var opt = new Object();
+             opt.onload_callback = function() {
+                 if (typeof(url) != 'undefined') {
+                     window.location = url;
+                 }
+             }
+             var conv_handler = window['google_trackConversion'];
+             if (typeof(conv_handler) == 'function') {
+               conv_handler(opt);
+             }
+         }
+         /* ]]> */
+      </script>
+      <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js"></script>
+      <div id="register_area" class="container">
+      <div id="register_box">
+      <div id="brand_area" class="text-center">
+         <!--<a href="/" class="brand-header"><img src="/public/images/logo-full.png" alt="ScaleGrid"></a>-->
+      </div>
+      <div id="register_form_box">
+      <img class="img-loader" src="/public/images/loading.gif" style="display: none;">
+      <form id="register-form" class="register-form" method="POST" action="" role="form" novalidate="novalidate">
+         <div class="form-group">
+            <div id="errors" class="alert alert-danger hide">
+            </div>
+         </div>
+         <div class="form-group">
+            <label for="email">
+            <i class="fa fa-envelope form-icon"></i>
+            Email Address
+            </label>
+            <!--<input class="form-control" type="email" title="email" placeholder="Email" id="email" name="email" autocomplete="off" required="" data-message="Email is invalid" value="{{request.form.email}}">-->
+            <input class="form-control" type="email" title="email" placeholder="Email" id="email" data-bind="value:registerEmail" data-required="true" data-type="email" name="email" autocomplete="off" value="{{request.form.email}}">
+         </div>
+         <div class="form-group password-area">
+            <div class="row">
+               <div class="form-group">
+                  <label for="password">
+                  <i class="fa fa-unlock-alt form-icon"></i>
+                  Password
+                  </label>
+                  <!--<input class="form-control" type="password" value="" placeholder="Password" id="password" name="password" required="required" data-message="Password is required" value="{{request.form.password}}"><br>-->
+                  <input class="form-control" type="password" value="" placeholder="Password" id="password" name="password" data-bind="value:registerPassword" data-required="true" data-minlength="7" data-numcount="1" data-uppercount="1" data-lowercount="1" data-toggle="tooltip" title="Must be at least 7 characters with one uppercase character, one lowercase
+                  character and one number" value="{{request.form.password}}"><br><br>
+                  <div class="form-group">
+                     <input type="submit" id="btn_submit" name="submit" class="btn btn-primary btn-block" title="Submit" value="Submit">
+                  </div>
+      </form>
+      </div>
+      </div>
+      <footer>
+      <p class="copyright">© Sigmaxm</p>
+      </footer>
+      </div>
+      <script data-main="/public/javascripts/modules/register/register.min.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js" async=""></script>
+      <script>if(window.require) { window.require.waitSeconds = 60 }</script>
+      <script>
+         !function(e){"use strict";var n=function(n,t,o){function i(e){return a.body?e():void setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var s=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=s[s.length-1]}var f=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=f.length;t--;)if(f[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
+      </script>
+      <script>
+         loadCSS('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css');
+         loadCSS('https://fonts.googleapis.com/css?family=Poppins:300,400,600');
+         loadCSS('/public/css/sigmaxmgrid.min.css');
+      </script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" media="all">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" media="all">
+      <link rel="stylesheet" href="/public/css/sigmaxmgrid.min.css" media="all">
+      <script src="https://analytics.twitter.com/i/adsct?p_id=Twitter&amp;p_user_id=0&amp;txn_id=nxs2h&amp;events=%5B%5B%22pageview%22%2C%7B%7D%5D%5D&amp;tw_sale_amount=0&amp;tw_order_quantity=0&amp;tw_iframe_status=0&amp;tpx_cb=twttr.conversion.loadPixels&amp;cache_bust=0.19453992063513326" type="text/javascript"></script>
+      <div style="display: none; visibility: hidden;">
+      </div>
+   <script src="{{ url_for('static', filename='vendors/jquery/dist/jquery.min.js') }}"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/2.2.1/knockout-min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/1.1.16/parsley.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script>{% include 'js/register.js' %}</script>
+   </body>
+</html>

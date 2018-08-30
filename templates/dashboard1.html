@@ -1,0 +1,129 @@
+{% extends "base_site.html" %}
+{% block title %} Dashboard 1 {% endblock title %}
+{% block stylesheets %}
+{{ super() }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+{% endblock stylesheets %}
+{% block content %}
+<div class="right_col" role="main">
+  <div class="">
+    <div class="clearfix"></div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>Dashboard</h2>
+
+
+               <div class="form-group" style="
+    /* padding-left: 11px; */
+    /* left: 11px; */
+    position:  relative;
+    left: 775px;
+">
+
+                  <div class="col-md-3 col-sm-3 col-xs-12 dropdown">
+                      <select id="down" onClick="window.location.reload();" class="selectpicker dropup" data-live-search="true">
+                      <option value=""></option>
+                     </select>
+
+                  </div>
+
+              <ul class="nav navbar-right panel_toolbox">
+
+
+                <li class="dropdown">
+                </li>
+
+                <li class="dropdown">
+
+                </li>
+
+
+              </ul>
+
+
+            <ul class="nav navbar-right panel_toolbox">
+
+              <li class="dropdown">
+              </li>
+
+              <li class="dropdown">
+              </li>
+
+            </ul>
+            <div class="clearfix"></div>
+      </div>
+    </div>
+
+      <div class="row">
+          <div class="x_content">
+            <!--<div id="dashboard" onload="myFunction()">-->
+            <!--</div>-->
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="tile-stats"><div class="icon"><i class="fa fa-user" style="color: #2361ae!important;"></i></div><div class="count" id="awsaccountvalue" style="color: #337ab7;"></div><h3 id="awsaccount" style="color: #337ab7;">awsaccount</h3><p></p></div></div>
+
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="tile-stats"><div class="icon"><i class="fa fa-server" style="color: #2361ae!important;"></i></div><div class="count" id="containersvalue" style="color: #337ab7;"></div><h3 id="containers" style="color: #337ab7;">containers</h3><p></p></div></div>
+
+
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="tile-stats"><div class="icon"><i class="fa fa-cubes" style="color: #2361ae!important;"></i></div><div class="count" id="dockerswarmsvalue" style="color: #337ab7;"></div><h3 id="dockerswarms" style="color: #337ab7;">dockerswarms</h3><p></p></div></div>
+
+
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="tile-stats"><div class="icon"><i class="fa fa-list-alt" style="color: #2361ae!important;"></i></div><div class="count" id="servicesvalue"  style="color: #337ab7;"></div><h3 id="services" style="color: #337ab7;">services</h3><p></p></div></div>
+
+
+          </div>
+          <div class="form-group">
+            <label for="Region" class="control-label col-md-6 col-sm-6 col-xs-12"></label>
+            <div class="col-md-2 col-sm-2 col-xs-12 col-md-offset-4">
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <div class="container" style="margin:10px 10px auto;border:1px solid orange";>
+                      <div id="iframe_div" class="embed-responsive embed-responsive-16by9">
+                        <iframe src="{{SwarmURL}}" class="embed-responsive-item" scrolling="no" style="background: #ffffff" width="100px" height="100px" src="{{SwarmURL}}" allowfullscreen=""> </iframe>-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of weather widget -->
+      </div>
+    </div>
+{% endblock content %}
+{% block javascripts %}
+{{ super()}}
+
+<script>{% include 'js/dashboard.js' %}</script>
+<!-- Chart.js -->
+<script src="{{ url_for('static', filename='vendors/Chart.js/dist/Chart.min.js') }}"></script>
+<!-- gauge.js -->
+<script src="{{ url_for('static', filename='vendors/gauge.js/dist/gauge.min.js') }}"></script>
+<!-- Skycons -->
+<script src="{{ url_for('static', filename='vendors/skycons/skycons.js') }}"></script>
+<!-- Flot -->
+<script src="{{ url_for('static', filename='vendors/Flot/jquery.flot.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/Flot/jquery.flot.pie.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/Flot/jquery.flot.time.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/Flot/jquery.flot.stack.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/Flot/jquery.flot.resize.js') }}"></script>
+<!-- Flot plugins -->
+<script src="{{ url_for('static', filename='vendors/flot.orderbars/js/jquery.flot.orderBars.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/flot-spline/js/jquery.flot.spline.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/flot.curvedlines/curvedLines.js') }}"></script>
+<!-- DateJS -->
+<script src="{{ url_for('static', filename='vendors/DateJS/build/date.js') }}"></script>
+<!-- JQVMap -->
+<script src="{{ url_for('static', filename='vendors/jqvmap/dist/jquery.vmap.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
+<script src="{{ url_for('static', filename='vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-hover-dropdown/2.2.1/bootstrap-hover-dropdown.js"></script>
+
+{% endblock javascripts %}

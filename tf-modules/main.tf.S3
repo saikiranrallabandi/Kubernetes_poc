@@ -1,0 +1,22 @@
+##Amazon Infrastructure
+provider "aws" {
+  region                  = "${var.aws_region}"
+  shared_credentials_file = "/Users/svaliveru/.aws/credentials"
+}
+
+terraform {
+  backend "s3" {
+    region  = "us-west-2"
+    bucket  = "sigmaxm-tf-bucket"
+  }
+}
+
+resource "aws_s3_bucket" "b" {
+  bucket = "sigmxm-bucket-${var.s3_name}"
+  acl    = "private"
+
+  tags {
+    Name        = "sigmaxm-bucket-${var.s3_name}"
+    Environment = "Delete"
+  }
+}

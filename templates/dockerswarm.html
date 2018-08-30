@@ -1,0 +1,131 @@
+{% extends "base_site.html" %}
+{% block content %}
+<div class="right_col" role="main">
+  <div class="">
+    <div class="clearfix"></div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>Docker Swarm </h2>
+            <ul class="nav navbar-right panel_toolbox">
+              </li>
+              <li class="dropdown">
+              </li>
+              </li>
+              <li class="dropdown">
+              </li>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
+            <br />
+            <form method="POST" action="" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+              <div class="col-md-6 col-sm-6 col-xs-12  form-group has-feedback">
+                <label class="control-label col-md-5 col-sm-4 col-xs-12" for="SwarmName">SwarmName <span class="required"></span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input name="SwarmName" type="text" id="SwarmName" required="required" class="form-control col-md-7 col-xs-12" value="{{request.form.SwarmName}}">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback" style="
+                padding-bottom: 4%;
+                ">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="KeyName">KeyName<span class="required"></span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <select name="KeyName" id=KeyName class="form-control selectpicker" >
+                    <option value="{{ request.form.KeyName}}" >Please select KeyName </option>
+                    {% for item in KeyNames %}
+                    <option>{{item}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <div class="styles__title___1l_0f">Swarm Manager Properties</div>
+              <hr>
+              <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                <label class="control-label col-md-5 col-sm-5 col-xs-12" for="ManagerInstanceType">ManagerInstanceType<span class="required"></span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <select name="ManagerInstanceType" class="form-control selectpicker" >
+                    <option value="{{ request.form.ManagerInstanceType }}" >Please select your ManagerInstanceType/option>
+                    <option>t2.micro</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback" style="padding-bottom: 3%;">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ManagerSize">ManagerSize<span class="required"></span>
+                </label>
+                <div class="col-md-4 col-sm-2 col-xs-12">
+                  <input name="ManagerSize" type="number" id="ManagerSize" name="ManagerSize" value="1" required="required" class="form-control col-md-7 col-xs-12" value="{{request.form.ManagerSize}}">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                <label class="control-label col-md-5 col-sm-5 col-xs-12" for="ManagerDiskType">ManagerDiskType<span class="required"></span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <select name="ManagerDiskType" class="form-control selectpicker" >
+                    <option value="{{ request.form.ManagerDiskType }}" >Please select your ManagerDiskType</option>
+                    <option>standard</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback" style="
+                padding-bottom: 4%;
+                ">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ManagerDiskSize">ManagerDiskSize<span class="required"></span>
+                </label>
+                <div class="col-md-4 col-sm-2 col-xs-12">
+                  <input name="ManagerDiskSize" type="number" id="ManagerDiskSize" required="required" value="20" class="form-control col-md-7 col-xs-12" value="{{request.form.ManagerDiskSize}}">
+                </div>
+              </div>
+              <div class="styles__title___1l_0f">Swarm Worker Properties</div>
+              <hr>
+              <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                <label class="control-label col-md-5 col-sm-5 col-xs-12" for="InstanceType">InstanceType<span class="required"></span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <select name="InstanceType" class="form-control selectpicker" >
+                    <option value="{{ request.form.InstanceType }}" >Please select your InstanceType</option>
+                    <option>t2.micro</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback" style="padding-bottom: 3%;">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="WorkerSize">ClusterSize<span class="required"></span>
+                </label>
+                <div class="col-md-4 col-sm-2 col-xs-12">
+                  <input name="ClusterSize" type="number" id="WorkerSize" name="WorkerSize" required="required" value="2" class="form-control col-md-7 col-xs-12" value="{{request.form.ClusterSize}}">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                <label class="control-label col-md-5 col-sm-5 col-xs-12" for="WorkerDiskType">WorkerDiskType<span class="required"></span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <select name="WorkerDiskType" class="form-control selectpicker" >
+                    <option value="{{ request.form.WorkerDiskType }}" >Please select your WorkerDiskType</option>
+                    <option>standard</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="WorkerDiskSize">WorkerDiskSize<span class="required"></span>
+                </label>
+                <div class="col-md-4 col-sm-2 col-xs-12">
+                  <input name="WorkerDiskSize" type="number" id="WorkerDiskSize"  required="required" value="20" class="form-control col-md-7 col-xs-12" value="{{request.form.WorkerDiskSize}}">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-5" style="padding: 2%;">
+                <button class="btn btn-primary" type="button">Cancel</button>
+                <button type="submit" class="btn btn-success">Submit </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

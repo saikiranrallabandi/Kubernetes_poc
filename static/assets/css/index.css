@@ -1,0 +1,43 @@
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: #dedede;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+div.footer footer {
+    background-image: linear-gradient(to right, #466BB0, #286AC7);
+    color: #fff;
+    padding: 1.5rem 0 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20rem;
+}
+.a {
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.2em;
+    padding: 0;
+    letter-spacing: .5px;
+    line-height: 1.1em;
+    }

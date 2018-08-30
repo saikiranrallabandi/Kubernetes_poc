@@ -1,0 +1,85 @@
+{% extends "base_site.html" %}
+{% block content %}
+<div class="right_col" role="main">
+  <div class="">
+    <div class="clearfix"></div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>AWS Settings </h2>
+            <ul class="nav navbar-right panel_toolbox">
+              </li>
+              <li class="dropdown">
+              </li>
+              </li>
+              <li class="dropdown">
+              </li>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
+            <br />
+            <form method="POST" action="" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+              <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="username">Username <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input name="username" type="text" id="username" required="required" class="form-control col-md-7 col-xs-12" value="{{request.form.username}}">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password">Password <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input name="password" type="password" id="password" required="required" class="form-control col-md-7 col-xs-12" value="{{request.form.password}}">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="AccessKey">AccessKey <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input name="AccessKey" type="text" id="AccessKey" required="required" class="form-control col-md-7 col-xs-12" value="{{request.form.AccessKey}}">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="SecretKey">SecretKey <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input name="SecretKey" type="password" id="SecretKey" name="SecretKey" required="required" class="form-control col-md-7 col-xs-12" value="{{request.form.SecretKey}}">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="Region" class="control-label col-md-3 col-sm-3 col-xs-12">Region </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <select name="Region" class="form-control selectpicker" >
+                    <option value="{{ request.form.Region }}" >Please select your Region</option>
+                    {% for item in names %}
+                    <option>{{item}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">AWSAccountID <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input name="AWSAccountID" id="AWSAccountID" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="{{request.form.AWSAccountID}}">
+                </div>
+              </div>
+              <div class="ln_solid"></div>
+              <div class="form-group">
+                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                  <button class="btn btn-primary" type="button">Cancel</button>
+                  <button type="submit" class="btn btn-success">Submit </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

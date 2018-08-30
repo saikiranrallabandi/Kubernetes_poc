@@ -1,0 +1,61 @@
+{% extends "base_site.html" %}
+
+{% block stylesheets %}
+  {{ super() }}
+  <link href="https://cdn.jsdelivr.net/sweetalert2/latest/sweetalert2.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/sweetalert2/latest/sweetalert2.css" rel="stylesheet">
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="right_col" role="main">
+    <div class="">
+      <div class="clearfix"></div>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="x_panel">
+            <div class="x_title">
+                <h2 style="padding-left: 28%;">Swarm Vizualizer</h2>
+               <div class="form-group">
+                  <div class="col-md-3 col-sm-3 col-xs-12">
+                      <select id="down" class="form-control selectpicker">
+                      <option value="">-- Select Swarm--</option>
+                     </select>
+
+                  </div>
+
+              <ul class="nav navbar-right panel_toolbox">
+
+                </li>
+                <li class="dropdown">
+                </li>
+                  </li>
+                <li class="dropdown">
+
+                </li>
+                </li>
+
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+
+
+                <div class="container" style="margin:10px 10px auto;border:1px solid orange";>
+                <div id="iframe_div" class="embed-responsive embed-responsive-16by9">
+
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+{% endblock content %}
+
+{% block javascripts %}
+  {{ super() }}
+<script>{% include 'js/vizualizer.js' %}</script>
+<script src="https://cdn.jsdelivr.net/sweetalert2/latest/sweetalert2.js"></script>
+    {% endblock javascripts %}

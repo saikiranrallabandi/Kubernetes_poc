@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<body>
+
+<p>Access an array value of a JSON object.</p>
+
+<p id="demo"></p>
+
+<script>
+
+var myObj, x;
+myObj = {
+
+    "repositories" : [ "1730961898/com.apple.appeng.apc.bdh/apcdocker","s_rallabandi/com.apple.appeng.apc.ldsh/apcdocker-apc-docker-admin"]
+};
+
+
+var _url = "api/viewimages";
+
+
+     var settings = {
+     "async": true,
+     "crossDomain": true,
+     "url": _url,
+     "method": "GET"
+
+     }
+
+$.ajax(settings).done(function (response) {
+
+
+});
+
+
+document.getElementById("demo").innerHTML = x;
+
+</script>
+
+</body>
+</html>

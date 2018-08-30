@@ -1,0 +1,22 @@
+- name: Initialize Swarm Master
+  hosts: swarm-master
+  gather_facts: yes
+  tasks:
+    - command: "docker swarm init --advertise-addr {{inventory_hostname}}"
+    - command: "docker swarm join-token -q worker"
+      register: swarm_token
+    - set_fact: swarmtoken="{{swarm_token.stdout}}"
+    - copy: src=/Users/svaliveru/sigmaxm-feature2.0/tf-modules/tlscerts.py dest=/home/ec2-user mode=0777
+    - command: "sudo /home/ec2-user/tlscerts.py"
+    - fetch:
+        src: /home/ec2-user/client_docker.zip
+        dest: /Users/svaliveru/sigmaxm-tfstate/
+        flat: yes
+
+- name: Join Swarm Nodes
+  hosts: swarm-nodes
+  gather_facts: yes
+  remote_user: root
+  sudo: yes
+  tasks:
+    - command: "docker swarm join --advertise-addr {{inventory_hostname}} --token {{hostvars[groups['swarm-master'][0]].swarmtoken}} {{hostvars[groups['swarm-master'][0]].inventory_hostname}}:2377"
